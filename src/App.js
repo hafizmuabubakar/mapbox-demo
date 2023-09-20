@@ -1,12 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import './App.css';
+import Anime from './Anime';
  
-mapboxgl.accessToken = 'Your_KEY';
-
-
-
-
+mapboxgl.accessToken = 'pk.eyJ1IjoiYXVnbWVudG9yaWEiLCJhIjoiY2xicGVnZG02MDJrNzNvczNmenh6dTFvciJ9.zh3QVMRpPYtFcE7wtMQfyQ';
 
   function App() {
     const mapContainer = useRef(null);
@@ -44,8 +41,10 @@ mapboxgl.accessToken = 'Your_KEY';
             Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
             </div>
             <div ref={mapContainer} className="map-container" />
-       
+
+            <Anime> </Anime>
       </div>
+      
     );
   }
 
